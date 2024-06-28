@@ -52,4 +52,3 @@ $nip = $_POST['nip'];
 //horas totales intentando solucionar el error 8
 
 //error encontrdo:
-// Parse error: syntax error, unexpected identifier "tb_tarjetas" in C:\xampp\htdocs\cajeroExpres\connection\login.php on line 15

@@ -42,6 +42,8 @@ END;
 
 /*CLIENTES -- CLIENTES -- CLIENTES  -- CLIENTES -- CLIENTES -- CLIENTES -- CLIENTES -- CLIENTES -- CLIENTES*/
 
+-- tg_log_clientes_insert --
+
 DELIMITER / / 
 CREATE TRIGGER tg_log_clientes_insert   /*crea el triger*/
 AFTER INSERT ON tb_clientes FOR EACH ROW BEGIN
@@ -61,7 +63,7 @@ VALUES
     );
 END;
 
-----------------------------------------------------------------------------------------------------------------------------------
+-- tg_log_clientes_update --
 
 / / DELIMITER / / 
 CREATE TRIGGER tg_log_clientes_update   /*crea el triger*/
@@ -82,6 +84,8 @@ VALUES
     );
 
 END;
+
+-- tg_log_clientes_delete --
 
 / / DELIMITER / / 
 CREATE TRIGGER tg_log_clientes_delete   /*crea el triger*/
@@ -121,6 +125,8 @@ VALUES
 END IF;
 END//
 
+-- Trigger de logout -- -- Trigger de logout -- -- Trigger de logout -- -- Trigger de logout -- -- Trigger de logout -- 
+
 DELIMITER //
 CREATE TRIGGER tb_logout_clientes 
 AFTER UPDATE ON tb_clientes FOR EACH ROW BEGIN
@@ -138,6 +144,7 @@ END IF;
     END//
 
 -- ACCCIONES -- -- ACCCIONES -- -- ACCCIONES -- -- ACCCIONES -- -- ACCCIONES -- -- ACCCIONES -- -- ACCCIONES --
+
 -- Trigger tg_log_tipo_movimientos_insert --
 
 DELIMITER / / 
@@ -154,6 +161,7 @@ VALUES
 END;
 
 -- Trigger tg_log_tipo_movimientos_update --
+
 DELIMITER / / 
 CREATE TRIGGER tg_log_tipo_movimientos_update   /*crea el triger*/
 AFTER UPDATE ON tb_tipo_movimientos FOR EACH ROW BEGIN
@@ -169,6 +177,7 @@ VALUES
 END;
 
 -- Trigger tg_log_tipo_movimientos_delete --
+
 DELIMITER / / 
 CREATE TRIGGER tg_log_tipo_movimientos_delete   /*crea el triger*/
 AFTER DELETE ON tb_tipo_movimientos FOR EACH ROW BEGIN

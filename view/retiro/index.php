@@ -5,6 +5,9 @@ session_start();
 if(!isset($_SESSION['id'])){
     header("Location: ../../index.html");
 }
+
+$saldo = $_SESSION['saldo'];
+
 ?>
 
 <!doctype html>
@@ -43,8 +46,8 @@ if(!isset($_SESSION['id'])){
             <h1 class="titulo_consulta">Retiro</h1>
         </div>
         <div>
-            <h2 class="saldo">$50,000.00</h2>
-            <h6 class="dispobinle">Saldo dispobinle</h6>
+            <h2 class="saldo"> $ <?= $saldo ?> </h2>
+            <h6 class="dispobinle">Saldo disponible</h6>
         </div>
         <div class="contenedor">
             <button class="btn btn btn-retiro">$50</button>

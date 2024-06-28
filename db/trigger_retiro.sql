@@ -11,7 +11,7 @@ BEGIN
 
     --consulta
     SELECT id_tipo_movimiento INTO retiro_id 
-    FROM tb_tipo_moviminento
+    FROM tb_tipo_moviminentos
     WHERE tipo = "retiro";
 
     SET v_saldo = OLD.saldo;
@@ -21,7 +21,7 @@ BEGIN
         --resta el saldo acutal con el viejo
         SET v_monto = -v_monto;
             IF v_saldo >= v_monto THEN
-                INSERT INTO moviminento(monto, id_tarjeta, id_tipo_movimiento)
+                INSERT INTO tb_tipo_moviminentos (monto, id_tarjeta, id_tipo_movimiento)
                 VALUE (v_monto, OLD.id_tarjeta, retiro_id);
 
                 --actualizar saldo
@@ -50,7 +50,7 @@ BEGIN
     DECLARE retiro_id INT;
 
     SELECT id_tipo_movimiento INTO retiro_id
-    FROM tb_tipo_movimiento
+    FROM tb_tipo_movimientos
     WHERE tipo = 'retiro';
 
     SET v_saldo = OLD.saldo;
@@ -59,7 +59,7 @@ BEGIN
     IF v_monto < 0 THEN
         SET v_monto = -v_monto;
             IF v_saldo >= v_monto THEN
-                INSERT INTO movimientos (monto,id_tarjeta,id_tipo_movimiento)
+                INSERT INTO tb_tipo_movimientos (monto,id_tarjeta,id_tipo_movimiento)
                 VALUE (v_monto,OLD.id_tarjeta,retiro_id);
 
                 SET NEW.saldo = OLD.saldo - v_monto;
