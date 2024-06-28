@@ -49,4 +49,3 @@ $n_tarjeta = $_POST['n_tarjeta'];
 $nip = $_POST['nip'];
 
 ?>
-NKXJNAWNDDNAW
