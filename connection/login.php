@@ -49,3 +49,5 @@ $n_tarjeta = $_POST['n_tarjeta'];
 $nip = $_POST['nip'];
 
 ?>
+//aqui da un error muy feo y no se cual es 
+//horas totales intentando solucionar el error 6
