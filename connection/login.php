@@ -7,11 +7,10 @@ if (isset($_POST['n_tarjeta']) && isset($_POST['nip'])) {
     
     $n_tarjeta = $_POST['n_tarjeta'];
     $nip = $_POST['nip'];
-    $sql = "SELECT id_tarjeta,n_tarjeta,nip, saldo,id_cliente,nombre, ap_paterno, ap_materno, , estado
-            FROM tb_tarjetas INNER JOIN tb_clientes
-            ON tb_tarjetas.id_cliente = tb_clientes.id_cliente
-            WHERE n_tarjeta = '$n_tarjeta' AND nip = '$nip'";
-            
+    $sql = "SELECT tb_tarjetas.id_tarjeta,tb_tarjetas.n_tarjeta, tb_tarjetas.nip, tb_tarjetas.saldo, tb_clientes.id_cliente, tb_clientes.nombre, tb_clientes.ap_paterno, tb_clientes.ap_materno, tb_clientes.estado
+            FROM tb_tarjetas 
+            INNER JOIN tb_clientes ON tb_tarjetas.id_cliente = tb_clientes.id_cliente
+            WHERE n_tarjeta = '$n_tarjeta' AND tb_tarjetas.nip = '$nip'";
 
     $result = $conn->query($sql);
     if ($result->num_rows > 0) {
@@ -50,4 +49,7 @@ $nip = $_POST['nip'];
 
 ?>
 //aqui da un error muy feo y no se cual es 
-//horas totales intentando solucionar el error 6
+//horas totales intentando solucionar el error 8
+
+//error encontrdo:
+// Parse error: syntax error, unexpected identifier "tb_tarjetas" in C:\xampp\htdocs\cajeroExpres\connection\login.php on line 15
