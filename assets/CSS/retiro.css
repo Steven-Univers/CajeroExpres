@@ -1,0 +1,79 @@
+.body{
+    background: url(../img/fondoRetiro.jpg);
+    background-size: cover;
+}
+
+.navbar{
+    background-color: rgb(30, 30, 66);
+    height: 55px;
+}
+
+.nombre_banco{
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.titulo_consulta{
+    color: white;
+    text-decoration: none;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.saldo{
+    color: white;
+    text-decoration: none;
+    margin-top: 50px;
+    text-align: center;
+    font-size: 90px;
+}
+
+.dispobinle{
+    color: white;
+    text-decoration: none;
+    margin-top: 1px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.contenedor{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.contenedor button{
+    margin: 5px;
+}
+
+.btn-retiro{
+    color: white;
+    background-color: #0da51a;
+    position: center;
+    margin-top: 100px;
+
+}
+
+.btn-3{
+    color: white;
+    background-color: #072146;
+    position: relative;
+    margin-left: 65px;
+    margin-top: 150px;
+}
+
+.contenedor_2{
+    display: flex;
+    justify-content: center;
+}
+
+.contenedor_2 button{
+    margin: 5px;
+}
+
+.btn-otra_cantidad{
+    color: white;
+    background-color: #072146;
+    position: relative;
+}

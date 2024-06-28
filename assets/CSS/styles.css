@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+body{   /*Intento de fondo con imagen*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url("../img/windows1.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    background-color: plum; 
+}
+
+.inicio {
+    width: 420px;
+    background: rgba(255, 255, 255, 0.726);
+    border: 2px solid rgba(255, 255, 255, .2);
+    color: black;
+    border-radius: 10px;
+    padding: 60px 10px;
+    text-align: center; /* Para centrar el texto dentro del contenedor */
+}
+
+.inicio h1 {
+    font-size: 36px;
+    text-align: center;
+}
+/* WTF */
+.inicio .formulario_registro {
+    position: relative;
+    width: 100%;
+    height: 22px;
+    margin: 35px 0;
+    /*background-color: aquamarine; Color de registro*/
+}
+
+.formulario_registro input {
+    width: 80%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    font-size: 16px;
+    color: #5b5757;
+    padding: 3px 2px 4px 9px;
+}
+
+.formulario_registro input::placeholder {
+    color: #575757;
+}
+
+.formulario_registro i {
+    position:absolute;
+    right: 9px;
+    left: 73%;
+    bottom: 19px;
+    top: 5px;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+.inicio .btn {
+    width: 80%;
+    height: 35px;
+    background: #48a3ffef;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 15px rgb(0,0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #000000;
+    font-weight: 600;
+    margin: 20px 0 15px;
+    
+}
+
+
+
+/* Text something here */

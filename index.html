@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>index</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preload" href="assets/CSS/styles.css" as="style">
+    <link rel="stylesheet" href="assets/CSS/styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+</head>
+<body>
+    <div class="inicio">
+        <form action="./connection/login.php" method="post">
+            <h1>Ingrese su tarjeta</h1>
+            
+            <div class="formulario_registro">
+            <input type="number" placeholder="CARD NUMBER" name="n_tarjeta" required>
+            <i class='bx bxs-user-rectangle'></i>
+            </div> 
+                <div class="formulario_registro">
+                    <input type="password" placeholder="PIN" name="nip" required>
+                    <i class='bx bxs-lock' ></i>
+            </div>
+            
+            <button type="submit" class="btn">lOGIN</button>
+        </form>
+    </div>
+</body>
+</html>
