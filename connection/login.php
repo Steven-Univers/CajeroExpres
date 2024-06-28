@@ -30,6 +30,7 @@ if (isset($_POST['n_tarjeta']) && isset($_POST['nip'])) {
         $_SESSION['id'] = $row['id_tarjeta'];
         $_SESSION['n_tarjeta'] = $row['n_tarjeta'];
         $_SESSION['saldo'] = $row['saldo'];
+        $_SESSION['id_cliente'] = $row['id_cliente'];
         $_SESSION['nombre'] = $row['nombre'];
         $_SESSION['ap_paterno'] = $row['ap_paterno'];
         $_SESSION['ap_materno'] = $row['ap_materno'];
@@ -48,7 +49,3 @@ $n_tarjeta = $_POST['n_tarjeta'];
 $nip = $_POST['nip'];
 
 ?>
-//aqui da un error muy feo y no se cual es 
-//horas totales intentando solucionar el error 8
-
-//error encontrdo:

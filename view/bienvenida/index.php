@@ -36,7 +36,7 @@ $ap_paterno = $_SESSION['ap_paterno'];
             <h1>Bienvenid@ Usuario 1</h1>
         
             <div class="contenido">
-                <a href="../../index.html" class="btn btn-1">Cerrar sesion</a>
+                <a  href="../../connection/logout.php" class="btn btn-1">Cerrar sesion</a>
                 <box-icon name='credit-card'></box-icon>
             </div>
             <div class="contenido">
