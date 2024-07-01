@@ -38,11 +38,11 @@ if (isset($_POST['n_tarjeta']) && isset($_POST['nip'])) {
         exit();
     } else {
         $_SESSION['error'] = "El número de tarjeta o el NIP son incorrectos";
-        header("Location: ../index.html");
+        header("Location: ../index.h");
     }
 } else {
     $_SESSION['error'] = "Completa todos los campos";
-    header("Location: ../index.html");
+    header("Location: ../index.h");
 };
 
 $n_tarjeta = $_POST['n_tarjeta'];
