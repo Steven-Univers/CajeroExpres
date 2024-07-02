@@ -21,9 +21,12 @@ if (isset($_POST['n_tarjeta']) && isset($_POST['nip'])) {
             exit();
         }
 
-        $sql = "UPDATE tb_clientes SET estado = 'Activo' WHERE id_cliente = " .$row['id_cliente'];
-        // $id_cliente = $row['id_cliente'];
-        // $sql = "call cajero.sp_actualizarEstadoCliente('$id_cliente')";
+        $sql = "SELECT id_tarjeta, n_tarjeta, nip, saldo,tb_tarjeta.id_cliente, nombre, ap_paterno, ap_materno
+            FROM tb_tarjeta INNER JOIN tb_clientes ON
+            tb_tarjeta.id_cliente = tb_clientes.id_cliente
+            WHERE n_tarjeta = '$n_tarjeta' AND nip = '$nip'";
+        //$sql = "UPDATE tb_clientes SET estado = 'Activo' WHERE id_cliente = " .$row['id_cliente'];
+        
 
         $conn->query($sql);
 
