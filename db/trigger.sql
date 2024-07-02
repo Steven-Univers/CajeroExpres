@@ -34,11 +34,13 @@ BEGIN
 INSERT INTO tb_log_tarjetas (accion,n_tarjeta,saldo,id_cliente)
 VALUES (
     'DELETE',
-    NEW.n_tarjeta,
-    NEW.saldo,
-    NEW.id_cliente
+    OLD.n_tarjeta,
+    OLD.saldo,
+    OLD.id_cliente
 );
 END;
+
+
 
 /*CLIENTES -- CLIENTES -- CLIENTES  -- CLIENTES -- CLIENTES -- CLIENTES -- CLIENTES -- CLIENTES -- CLIENTES*/
 
