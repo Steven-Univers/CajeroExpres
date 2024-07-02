@@ -7,10 +7,10 @@ if (isset($_POST['n_tarjeta']) && isset($_POST['nip'])) {
     
     $n_tarjeta = $_POST['n_tarjeta'];
     $nip = $_POST['nip'];
-    $sql = "SELECT tb_tarjetas.id_tarjeta,tb_tarjetas.n_tarjeta, tb_tarjetas.nip, tb_tarjetas.saldo, tb_clientes.id_cliente, tb_clientes.nombre, tb_clientes.ap_paterno, tb_clientes.ap_materno, tb_clientes.estado
-            FROM tb_tarjetas 
-            INNER JOIN tb_clientes ON tb_tarjetas.id_cliente = tb_clientes.id_cliente
-            WHERE n_tarjeta = '$n_tarjeta' AND tb_tarjetas.nip = '$nip'";
+    $sql = "SELECT id_tarjeta, n_tarjeta, nip, saldo,tb_tarjetas.id_cliente, nombre, ap_paterno, ap_materno
+            FROM tb_tarjetas INNER JOIN tb_clientes ON
+            tb_tarjetas.id_cliente = tb_clientes.id_cliente
+            WHERE n_tarjeta = '$n_tarjeta' AND nip = '$nip'";
 
     $result = $conn->query($sql);
     if ($result->num_rows > 0) {
@@ -21,11 +21,10 @@ if (isset($_POST['n_tarjeta']) && isset($_POST['nip'])) {
             exit();
         }
 
-        $sql = "SELECT id_tarjeta, n_tarjeta, nip, saldo,tb_tarjeta.id_cliente, nombre, ap_paterno, ap_materno
-            FROM tb_tarjeta INNER JOIN tb_clientes ON
-            tb_tarjeta.id_cliente = tb_clientes.id_cliente
-            WHERE n_tarjeta = '$n_tarjeta' AND nip = '$nip'";
-        //$sql = "UPDATE tb_clientes SET estado = 'Activo' WHERE id_cliente = " .$row['id_cliente'];
+    
+    //$result->free();
+    //$conexion->next_result();
+    $sql = "UPDATE tb_clientes SET estado = 'Activo' WHERE id_cliente = " .$row['id_cliente'];
         
 
         $conn->query($sql);
